@@ -1,0 +1,11 @@
+C:\Users\dmx\source\repos\btl_huy\btl_huy\bin\Debug\netcoreapp2.2\btl_huy.deps.json
+C:\Users\dmx\source\repos\btl_huy\btl_huy\bin\Debug\netcoreapp2.2\btl_huy.runtimeconfig.json
+C:\Users\dmx\source\repos\btl_huy\btl_huy\bin\Debug\netcoreapp2.2\btl_huy.runtimeconfig.dev.json
+C:\Users\dmx\source\repos\btl_huy\btl_huy\bin\Debug\netcoreapp2.2\btl_huy.dll
+C:\Users\dmx\source\repos\btl_huy\btl_huy\bin\Debug\netcoreapp2.2\btl_huy.pdb
+C:\Users\dmx\source\repos\btl_huy\btl_huy\obj\Debug\netcoreapp2.2\btl_huy.csprojAssemblyReference.cache
+C:\Users\dmx\source\repos\btl_huy\btl_huy\obj\Debug\netcoreapp2.2\btl_huy.csproj.CoreCompileInputs.cache
+C:\Users\dmx\source\repos\btl_huy\btl_huy\obj\Debug\netcoreapp2.2\btl_huy.AssemblyInfoInputs.cache
+C:\Users\dmx\source\repos\btl_huy\btl_huy\obj\Debug\netcoreapp2.2\btl_huy.AssemblyInfo.cs
+C:\Users\dmx\source\repos\btl_huy\btl_huy\obj\Debug\netcoreapp2.2\btl_huy.dll
+C:\Users\dmx\source\repos\btl_huy\btl_huy\obj\Debug\netcoreapp2.2\btl_huy.pdb
