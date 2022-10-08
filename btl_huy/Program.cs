@@ -8,8 +8,32 @@ namespace btl_huy
     class Program
     {
        static List<Student> studentList = new List<Student>();
+        static List<Admin> adminList = new List<Admin>();
+        
+       
+
         static void Main(string[] args)
         {
+            Admin admin = new Admin();
+            admin.setId(1);
+            admin.setName("huy");
+            admin.setPassword("huy");
+            adminList.Add(admin);
+            bool checkLogin = true;
+            do {
+                bool resuit = dispayLogin();
+                if(resuit == true)
+                {
+                    checkLogin = false;
+                }
+                else
+                {
+                    Console.WriteLine("sai tên đăng nhập or mật khẩu");
+                }
+            } while (checkLogin);
+            
+
+
             do {
                 dispayMenu();
                 int number = int.Parse(Console.ReadLine());
@@ -69,7 +93,22 @@ namespace btl_huy
         }
 
 
+        public static bool dispayLogin()
+        {
 
+            Console.WriteLine("nhập username");
+            String username = Console.ReadLine();
+            Console.WriteLine("nhập password");
+            String password = Console.ReadLine();
+            foreach(Admin admin in adminList)
+            {
+                if(admin.getName().Equals(username) && admin.getPassword().Equals(password))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
 
         public static void dispayMenu()
