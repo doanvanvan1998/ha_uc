@@ -8,6 +8,7 @@ namespace btl_huy
     {
 
         private int date_of_birth;
+        private float point;
         
         public void setDateOfBirth(int date_of_birth)
         {
@@ -16,16 +17,26 @@ namespace btl_huy
 
         public int getDateOfBirth()
         {
-            return this.date_of_birth;
+            return 2022 - this.date_of_birth;
         }
 
-        public int tinhSoTuoi(int date_of_birth)
+
+        public void setPoit(float point)
         {
-            int age = 2022 - date_of_birth;
-
-
-            return age;
+            this.point = point;
         }
+        public float getPoint()
+        {
+            return this.point;
+        }
+
+        //public int tinhSoTuoi(int date_of_birth)
+        //{
+        //    int age = 2022 - date_of_birth;
+
+
+        //    return age;
+        //}
 
 
     }
