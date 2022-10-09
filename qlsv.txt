@@ -1,0 +1,6 @@
+id                    name                 năm sinh        điểm
+1                    vandv                    24                    9
+1                    vandv                    24                    9
+1                    vandv                    24                    9
+1                    vandv                    24                    9
+4                    huy                    2002                    10

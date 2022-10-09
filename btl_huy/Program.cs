@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace btl_huy
@@ -14,6 +15,8 @@ namespace btl_huy
 
         static void Main(string[] args)
         {
+           
+            readFromFile();
             Admin admin = new Admin();
             admin.setId(1);
             admin.setName("huy");
@@ -87,9 +90,6 @@ namespace btl_huy
                 }
 
             } while (true);
-            
-            Console.ReadKey();
-
         }
 
 
@@ -134,10 +134,6 @@ namespace btl_huy
 
         }
 
-
-
-
-
         public static void insertNewStudent()
         {
             Student student = new Student();
@@ -150,6 +146,7 @@ namespace btl_huy
             Console.WriteLine("nhập điểm :");
             student.setPoit(float.Parse(Console.ReadLine()));
             studentList.Add(student);
+            writeToFile(student);
         }
         public static List<Student> findByName(String name)
         {
@@ -161,8 +158,6 @@ namespace btl_huy
                     newList.Add(student);
                 }
             }
-
-
 
             return newList;
         }
@@ -213,6 +208,82 @@ namespace btl_huy
             }
             return null;
         }
+        public static void readFromFile()
+        {
+            List<Student> listStudentInFile = new List<Student>();
+                try{
+
+                using (StreamReader sr = new StreamReader("C:/Users/dmx/source/repos/btl_huy/qlsv.txt"))
+                {
+
+                
+                    string line;
+                    int step = 0;
+
+                while((line = sr.ReadLine()) != null)
+                    {
+                        if (step != 0)
+                        {
+                            Student student = new Student();
+                            String[] data = line.Split("                    ");
+                            student.setId(int.Parse(data[0]));
+                            student.setName(data[1]);
+                            student.setDateOfBirth(int.Parse(data[2]));
+                            student.setPoit(float.Parse(data[3]));
+
+                            listStudentInFile.Add(student);
+                            //Console.Write(student.getId());
+                            //Console.Write("                ");
+                            //Console.Write(student.getName());
+                            //Console.Write("                ");
+                            //Console.Write(student.getDateOfBirth());
+                            //Console.Write("                ");
+                            //Console.Write(student.getPoint());
+                            //Console.Write("                ");
+                            //Console.WriteLine();
+                        }
+                        
+                        step++;
+                    }
+                
+                }
+                studentList = listStudentInFile;
+              
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+
+        public static void writeToFile(Student student)
+        {
+            try
+            {
+               
+
+                using (StreamWriter sw = new StreamWriter("C:/Users/dmx/source/repos/btl_huy/qlsv.txt",true))
+                {
+                    
+                    sw.Write((student.getId()).ToString());
+                    sw.Write("                    ");
+                    sw.Write(student.getName());
+                    sw.Write("                    ");
+                    sw.Write((student.getDateOfBirth()).ToString());
+                    sw.Write("                    ");
+                    sw.Write((student.getPoint()).ToString());
+                    sw.WriteLine();
+
+                }
+            
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
 
     }
 }
